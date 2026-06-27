@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ReceiptFlash Worker — 下載</title>
+<style>
+  body { font-family: -apple-system, sans-serif; max-width: 600px; margin: 60px auto; padding: 20px; background: #f7f8fa; }
+  h1 { color: #1a1a2e; }
+  .file { background: white; padding: 16px; margin: 12px 0; border-radius: 10px; border: 1px solid #e2e4ec; }
+  .file code { background: #f0f0f5; padding: 2px 6px; border-radius: 4px; font-size: 14px; }
+  .cmd { background: #1a1a2e; color: #a8ff78; padding: 16px; border-radius: 10px; font-family: monospace; font-size: 13px; margin: 20px 0; white-space: pre-wrap; }
+</style>
+</head>
+<body>
+<h1>⚡ ReceiptFlash Worker</h1>
+<p>Cloudflare Worker 代碼，下載後放進你的 GitHub repo：</p>
+
+<div class="cmd"># 在你的電腦運行：
+git clone https://github.com/sueieche/ReceiptFlash.git
+cd ReceiptFlash
+
+# 複製以下文件到 repo 根目錄：
+#   src/index.ts
+#   wrangler.toml
+#   package.json
+#   tsconfig.json
+#   .gitignore
+#   README.md
+
+git add .
+git commit -m "feat: add upload worker"
+git push origin main</div>
+
+<p><strong>文件列表：</strong></p>
+<div class="file"><code>src/index.ts</code> — Worker 主代碼，接收文件上傳到 R2</div>
+<div class="file"><code>wrangler.toml</code> — Worker 配置，綁定 R2 bucket</div>
+<div class="file"><code>package.json</code> — npm 依賴</div>
+<div class="file"><code>tsconfig.json</code> — TypeScript 配置</div>
+<div class="file"><code>.gitignore</code> — 忽略 node_modules 等</div>
+<div class="file"><code>README.md</code> — 使用說明</div>
+
+<p style="color:#888; font-size:13px; margin-top:40px;">
+然後在 Cloudflare → Workers & Pages → Create application → Connect to GitHub → 選擇 ReceiptFlash repo → 部署完成後，Worker URL 就是你的上傳端點。
+</p>
+</body>
+</html>
